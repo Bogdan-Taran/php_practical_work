@@ -1,4 +1,8 @@
 <?php
+if(isset($_POST['submit'])){
+    header("Location: functions.php");
+    exit();
+}
 /*
 Создайте индексный массив чисел от 1 до 10.
 Используя цикл, выведите только чётные элементы массива.
@@ -102,6 +106,9 @@ foreach($result_array as $index_4 => $var_4){
         break;
     }
 }
-
-
 ?>
+
+<p>Перейти к следующему заданию</p>
+<form action="functions.php" method="post">
+    <input type="submit" name="submit" id="submit" value="Перейти">
+</form>
